@@ -14,6 +14,7 @@ Plugin 'jnurmine/Zenburn'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'sjl/gundo.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -39,8 +40,9 @@ set laststatus=2
 
 "Mapping for YCM
 let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
+nnoremap <F5> :GundoToggle<CR>
+let g:gundo_close_on_revert=1
 
 set encoding=utf-8
 
@@ -69,8 +71,3 @@ au BufNewFile,BufRead *.js, *.html, *.css
 			\set tabstop=2
 			\set softtabstop=2
 			\set shiftwidth=2
-
-
-
-
-
