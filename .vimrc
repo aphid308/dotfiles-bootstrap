@@ -15,10 +15,10 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'sjl/gundo.vim'
+Plugin 'vim-scripts/django.vim'
+Plugin 'SirVer/ultisnips'
 
 call vundle#end()
-filetype plugin indent on
-filetype on
 
 
 set splitbelow
@@ -44,6 +44,11 @@ let g:ycm_autoclose_preview_window_after_completion=1
 nnoremap <F5> :GundoToggle<CR>
 let g:gundo_close_on_revert=1
 
+let g:UltiSnipsExpandTrigger       = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger  = "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
+let g:UltiSnipsListSnippets        = "<c-k>" "List possible snippets based on current file
+
 set encoding=utf-8
 
 "Python with virtualenv support
@@ -58,16 +63,14 @@ EOF
 
 let python_highlight_all=1
 syntax on
+filetype on
+filetype plugin on
+filetype indent on
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set textwidth=79
+set expandtab
+set autoindent
+set fileformat=unix
 
-au BufNewFile,BufRead *.py
-			\set tabstop=4
-			\set softtabstop=4
-			\set shiftwidth=4
-			\set textwidth=79
-			\set expandtab
-			\set autoindent
-			\set fileformat=unix
-au BufNewFile,BufRead *.js, *.html, *.css
-			\set tabstop=2
-			\set softtabstop=2
-			\set shiftwidth=2
