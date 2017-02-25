@@ -114,3 +114,5 @@ if ! shopt -oq posix; then
 fi
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 alias PluginInstall='vim +PluginInstall +qall'
+alias vim='gvim'
+alias rpiconn='ssh pi@172.101.17.187'
