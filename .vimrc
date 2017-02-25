@@ -18,12 +18,16 @@ Plugin 'sjl/gundo.vim'
 Plugin 'vim-scripts/django.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'vim-scripts/surround.vim'
+Plugin 'wincent/command-t'
 
 call vundle#end()
 
 
 set splitbelow
 set splitright
+set guioptions-=T
+set guioptions-=m
+set lines=35 columns=150
 
 colorscheme zenburn
 
@@ -61,15 +65,6 @@ let b:surround_{char2nr("c")} = "{% comment %}\r{% endcomment %}"
 
 set encoding=utf-8
 
-"Python with virtualenv support
-py << EOF
-import os
-import sys
-if 'VIRTUAL_ENV' in os.environ:
-  project_base_dir = os.environ['VIRTUAL_ENV']
-  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  execfile(activate_this, dict(__file__=activate_this))
-EOF
 
 let python_highlight_all=1
 syntax on
