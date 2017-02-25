@@ -112,5 +112,5 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-source /usr/local/bin/virtualenvwrapper.sh
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 alias PluginInstall='vim +PluginInstall +qall'

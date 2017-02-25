@@ -27,7 +27,7 @@ set splitbelow
 set splitright
 set guioptions-=T
 set guioptions-=m
-set lines=35 columns=150
+set lines=135 columns=90
 
 colorscheme zenburn
 
