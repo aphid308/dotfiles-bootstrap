@@ -19,6 +19,7 @@ Plugin 'vim-scripts/django.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'vim-scripts/surround.vim'
 Plugin 'wincent/command-t'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 
@@ -29,7 +30,7 @@ set guioptions-=T
 set guioptions-=m
 set lines=135 columns=90
 
-colorscheme zenburn
+colorscheme monokai-chris
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
