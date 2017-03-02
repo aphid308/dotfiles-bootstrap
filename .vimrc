@@ -78,4 +78,4 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set fileformat=unix
-
+nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
