@@ -112,11 +112,4 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export HOME_RPI=172.101.17.187
-source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
-alias PluginInstall='vim +PluginInstall +qall'
-alias vim='gvim'
-alias rpiconn='ssh drowns@$HOME_RPI'
-export PS1='[\u@\H_\A]\$\[(B[m\]'
-export PS1='\u_\l\$:\[[m\]'
-export PS1='\u_\l\w\$:\[[m\]'
+export PS1="\[\033[35m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "

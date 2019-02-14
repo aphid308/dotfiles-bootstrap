@@ -79,3 +79,7 @@ set expandtab
 set autoindent
 set fileformat=unix
 nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+
+if &term =~ "xterm" || &term =~ "screen"
+        let g:CommandTCancelMap = ['<ESC>', '<C-c>']
+    endif
