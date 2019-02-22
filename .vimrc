@@ -20,9 +20,12 @@ Plugin 'SirVer/ultisnips'
 Plugin 'vim-scripts/surround.vim'
 Plugin 'wincent/command-t'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'tpope/vim-markdown'
 
 call vundle#end()
 
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
 
 set splitbelow
 set splitright
