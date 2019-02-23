@@ -116,3 +116,6 @@ if ! shopt -oq posix; then
   fi
 fi
 export PS1="\[\033[35m\]\t\[\033[m\]-\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+
+#this fixes my command-t issue with opengin horizontal splits
+stty -ixon
